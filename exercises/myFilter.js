@@ -2,7 +2,16 @@
 function myFilter(arr, callback) {
 
 //  CODE INSIDE HERE   //
-
+  
+  var newArr = [];
+  
+  for (var idx = 0; idx < arr.length; idx++) {
+    if (callback(arr[idx], idx, arr)) {
+      newArr.push(arr[idx]);
+    }
+  }
+  
+  return newArr;
 }
 
 /*

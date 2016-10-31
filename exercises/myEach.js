@@ -4,6 +4,10 @@ function myEach(arr, callback) {
 
 //  CODE INSIDE HERE   //
 
+  for (var idx = 0; idx < arr.length; idx++) {
+    callback(arr[idx], idx, arr);
+  }
+
 }
 
 /*
