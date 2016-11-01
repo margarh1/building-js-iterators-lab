@@ -5,14 +5,16 @@ function myReduce(arr, callback, initialValue) {
 
 //  CODE INSIDE HERE   //
 
-  var start;
+  var idx;
   var exitValue = arr[0];
 
   if (initialValue === undefined) {
-    start = 1;
+    idx = 1;
+  } else {
+    idx = initialValue;
   }
 
-  for (var idx = start; idx < arr.length; idx++) {
+  for (idx; idx < arr.length; idx++) {
     exitValue = callback(exitValue, arr[idx], idx, arr);
   }
 
